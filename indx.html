@@ -1,0 +1,72 @@
+<!--EVENT->what action is performed like hovering,clicking,scrolling
+EVENT HANDLER->what is the type of event and the element(like on h1,div,img,p tags) where it is performed
+EVENT LISTENER-> a function which will be waiting in backend,and it will push the code to frontend whenever it is called -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" id="b">
+        <ul>
+            <li>RCB</li>
+            <li>KKR</li>
+            <li>MI</li>
+            <li>CSK</li>
+        </ul>
+    </div>
+    <button id="btn">Click Me</button>
+    <br>
+    <img width="200px" height="300px" id="image" src="https://images.pexels.com/photos/17815428/pexels-photo-17815428/free-photo-of-portrait-of-a-brown-border-collie-standing-in-a-meadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+    <script>
+        //always first select the element that u need to manipulate with JS
+        //console.log(document.getElementById('btn'));
+       // function print(){//this function acts as event listener
+       //     console.log("Hello welcome to JS");
+      //  }
+      //  document.getElementById('btn').addEventListener('click',print);//this statement will select the particular element and will call the event listener
+       
+      
+    
+      function addcontent(){
+          //to add content inside an element
+        //document.getElementById('b').innerHTML="<h1> Hello Guyss</h1>"
+
+
+
+         //to get the content present in the element
+       // console.log(document.getElementById('b').innerHTML);
+
+       //to modify the css properties dynamically
+       document.getElementById('b').style.width="400px";
+       document.getElementById('b').style.height="300px";
+       document.getElementById('b').style.backgroundColor="lightblue";
+      }
+      document.getElementById('btn').addEventListener('click',addcontent);
+
+
+
+      //to manipulate the attributes
+      function changeImage(){
+        document.getElementById('image').setAttribute('src',"https://images.pexels.com/photos/9739345/pexels-photo-9739345.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load")
+      }
+      document.getElementById('image').addEventListener('click',changeImage);
+
+
+     
+
+    </script>
+    
+</body>
+</html>

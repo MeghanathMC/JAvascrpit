@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        
+    }
+    .box{
+        height: 200px;
+        width: 200px;
+        background-color: yellow;
+    }
+    .overlay{
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        display: none;
+    }
+    .boxx{
+        background-color: white;
+        height: 60vh;
+        width: 40%;
+        margin-top: 20vh;
+        margin-left: 30%;
+    }
+</style>
+<body>
+
+    <div class="overlay" id="popup">
+        <div class="boxx">
+            <button id="closee">close</button>
+
+        </div>
+    </div>
+    <button id="login">Login</button>
+
+    <div class="box" id="b">
+        <ul>
+            <li>RCB</li>
+            <li>KKR</li>
+            <li>MI</li>
+            <li>CSK</li>
+        </ul>
+    </div>
+    <button id="btn">Click Me</button>
+    <br>
+    <img width="200px" height="300px" id="image" src="https://images.pexels.com/photos/17815428/pexels-photo-17815428/free-photo-of-portrait-of-a-brown-border-collie-standing-in-a-meadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+   
+    <script>
+        function showPopup(){
+            document.getElementById('popup').style.display="block";
+
+        }
+        function hidePopup(){
+            document.getElementById('popup').style.display="none";
+
+        }
+        document.getElementById('closee').addEventListener('click',hidePopup);
+
+        document.getElementById('login').addEventListener('click',showPopup);
+    </script>
+    
+</body>
+</html>
